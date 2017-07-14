@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NewsActivity">
+
+    <com.example.zhangjiawen.daily.ui.MyScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:scrollbars="vertical">
+
+        <FrameLayout
+            android:id="@+id/frameLayoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="80dp">
+
+            <WebView
+                android:id="@+id/WebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical">
+            </WebView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/new_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/new_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="20dp"
+                    android:shadowColor="@android:color/black"
+                    android:shadowRadius="5"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:id="@+id/image_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="right"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10dp"/>
+
+            </FrameLayout>
+        </FrameLayout>
+
+    </com.example.zhangjiawen.daily.ui.MyScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/news_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true">
+
+    </android.support.v7.widget.Toolbar>
+</FrameLayout>
